@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>Phoggren.AspNetCore.Boilerplate</AssemblyName>
+    <RootNamespace>SandboxApp</RootNamespace>
+    <Version>0.0.1</Version>
+    <Authors>Patrik Hoggren &lt;p@hoggren.nu&gt;</Authors>
+    <Product>Minimal boilerplate (WebHost/GenericHost) for ASP.NET Core</Product>
+    <Description>Minimal boilerplate (WebHost/GenericHost) for ASP.NET Core with much documentation, code you can snip off and on etc. There is also a briefly "guide" how to write XML documentation.</Description>
+    <RepositoryType>MIT</RepositoryType>
+    <Copyright>Open Source Software</Copyright>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <PackageProjectUrl>https://opensource.org</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageTags>.NET Core, ASP. NET Core, DotNet, Core, DotnetCore, GenericHost, WebHost</PackageTags>
+    <Company />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="10.2.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JSONSchema="http://json.schemastore.org/appsettings" /></VisualStudio></ProjectExtensions>
+
+</Project>
